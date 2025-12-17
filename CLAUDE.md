@@ -58,13 +58,6 @@ This project uses CodeRabbit AI for automated code reviews (`.coderabbit.yaml`):
 - Mock usage and test isolation
 - Coverage of edge cases
 
-## Dependency Management
-
-- **Dependabot** configured for weekly NuGet updates (Mondays at 3:00 AM)
-- Monthly GitHub Actions updates
-- Dependencies labeled with "dependencies" + package type
-- Commit messages: `build(scope):` for NuGet, `ci:` for Actions
-
 ## Architecture Notes
 
 When implementing the project structure:
