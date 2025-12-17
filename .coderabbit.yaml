@@ -12,52 +12,34 @@ reviews:
     enabled: true
     drafts: false
   request_changes_workflow: true
+  path_instructions:
+    - path: "**/*.cs"
+      instructions: |
+        Review C# code for:
+        - Adherence to C# coding conventions and .NET best practices
+        - SOLID principles and design patterns
+        - Proper use of async/await patterns
+        - Exception handling and resource disposal (IDisposable)
+        - Null reference handling (nullable reference types)
+        - Performance considerations (LINQ efficiency, allocations)
+        - Security vulnerabilities (SQL injection, XSS, authentication issues)
+        - Thread safety and concurrency issues
 
-path_instructions:
-  - path: "**/*.cs"
-    instructions: |
-      Review C# code for:
-      - Adherence to C# coding conventions and .NET best practices
-      - SOLID principles and design patterns
-      - Proper use of async/await patterns
-      - Exception handling and resource disposal (IDisposable)
-      - Null reference handling (nullable reference types)
-      - Performance considerations (LINQ efficiency, allocations)
-      - Security vulnerabilities (SQL injection, XSS, authentication issues)
-      - Thread safety and concurrency issues
+    - path: "**/*.csproj"
+      instructions: |
+        Review project files for:
+        - Appropriate package versions and security updates
+        - Proper target framework selection
+        - Unnecessary or duplicate package references
 
-  - path: "**/*.csproj"
-    instructions: |
-      Review project files for:
-      - Appropriate package versions and security updates
-      - Proper target framework selection
-      - Unnecessary or duplicate package references
-
-  - path: "**/Tests/**/*.cs"
-    instructions: |
-      Review test code for:
-      - Test coverage and edge cases
-      - Proper use of testing frameworks (xUnit/NUnit/MSTest)
-      - Test naming conventions
-      - Arrange-Act-Assert pattern
-      - Mock usage and test isolation
-
-path_filters:
-  - "!**/*.Designer.cs"
-  - "!**/obj/**"
-  - "!**/bin/**"
-  - "!**/packages/**"
-  - "!**/*.min.js"
-  - "!**/*.min.css"
-
-tools:
-  github-checks:
-    enabled: true
-    timeout_ms: 90000
-  markdownlint:
-    enabled: true
-  shellcheck:
-    enabled: true
+    - path: "**/Tests/**/*.cs"
+      instructions: |
+        Review test code for:
+        - Test coverage and edge cases
+        - Proper use of testing frameworks (xUnit/NUnit/MSTest)
+        - Test naming conventions
+        - Arrange-Act-Assert pattern
+        - Mock usage and test isolation
 
 knowledge_base:
   opt_out: false
