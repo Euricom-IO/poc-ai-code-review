@@ -1,23 +1,3 @@
----
-excludeAgent: ["coding-agent"]
----
-
-# GitHub Copilot PR Review Instructions
-
-These instructions guide PR reviews for this .NET 8.0 C# project. Focus on code quality, maintainability, security, and adherence to established patterns.
-
----
-
-## Review Philosophy
-
-- Provide assertive, actionable feedback on substantive issues
-- Focus on correctness, security, performance, and maintainability
-- Reference existing patterns in the codebase
-- Be specific: cite line numbers and provide concrete examples
-- Prioritize high-impact issues over minor style preferences
-
----
-
 ## C# Code Review Guidelines
 
 ### Coding Conventions & Best Practices
